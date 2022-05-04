@@ -1,0 +1,18 @@
+@import "./branding";
+
+@mixin defaultHeaders {
+  font-family: $header;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+@mixin defaultFont {
+  font-family: $font;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
