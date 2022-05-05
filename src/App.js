@@ -8,12 +8,14 @@ import Gen5 from "../src/pages/Generations/Gen5";
 import Gen6 from "../src/pages/Generations/Gen6";
 import Gen7 from "../src/pages/Generations/Gen7";
 import Gen8 from "../src/pages/Generations/Gen8";
+import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
 import "./style/App.scss";
 
 function App() {
   const [activePage, setActivePage] = useState("Gen 1");
   const [navActive, setNavActive] = useState(false);
+  const [activeHeader, setActiveHeader] = useState("favorites");
 
   function toggleNav() {
     setNavActive(!navActive);
@@ -24,9 +26,14 @@ function App() {
     toggleNav();
   }
 
+  function changeHeader(e) {
+    setActiveHeader(e.target.innerHTML.toLowerCase());
+  }
+
   return (
     <Router>
       <div className="app">
+        <Header activeHeader={activeHeader} changeHeader={changeHeader} />
         <Navigation
           navActive={navActive}
           toggleNav={toggleNav}

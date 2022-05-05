@@ -5,6 +5,10 @@
   .navigation {
     width: 100%;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
   }
 
   .nav-items {
@@ -54,11 +58,13 @@
   }
 
   .navigation-inactive {
+    pointer-events: none;
     .nav-items {
       opacity: 0;
     }
     button {
       background-color: $darkGray;
+      pointer-events: all;
     }
   }
 
@@ -132,6 +138,7 @@
   }
 
   .navigation-inactive {
+    pointer-events: all;
     .nav-items {
       opacity: 1;
     }

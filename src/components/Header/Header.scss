@@ -1,0 +1,49 @@
+@import "../../style/mixins";
+@import "../../style/branding";
+
+@media screen and (min-width: 100px) {
+  .header {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    @include flex(row, center, center);
+    button {
+      min-width: 40%;
+      max-width: 45%;
+      border: none;
+      background-color: $gray;
+      color: $white;
+      height: 5vh;
+
+      @include defaultHeaders;
+    }
+    .header-active {
+      background-color: $darkGray;
+    }
+  }
+
+  .fav-btn {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .list-btn {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .header {
+    button {
+      font-size: 1.25rem;
+    }
+  }
+}
