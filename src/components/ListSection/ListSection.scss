@@ -1,0 +1,72 @@
+@import "../../style/branding";
+
+@media screen and (min-width: 100px) {
+  .list-section {
+    margin-top: 10vh;
+    text-align: center;
+    width: 100%;
+    overflow-y: hidden;
+    transform: translateX(0%);
+    transition: transform 0.25s linear;
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .list-data {
+    width: 95%;
+    margin: 1.25vh auto 0 auto;
+    height: 84vh;
+    background-color: $lightGray;
+    overflow-y: auto;
+    padding-bottom: 10vh;
+    box-shadow: inset 0px 0px 5px #111;
+  }
+
+  .list-active {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .list-section {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-section {
+    margin-top: 5vh;
+    width: 50%;
+    transform: translateX(0%);
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .list-data {
+    height: 89vh;
+    padding-bottom: 10vh;
+  }
+
+  .list-active {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list-section {
+    margin-top: 2.5vh;
+    width: 70%;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .list-data {
+    height: 90vh;
+    padding-bottom: 0vh;
+  }
+}

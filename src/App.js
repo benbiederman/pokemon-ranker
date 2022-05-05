@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Gen1 from "../src/pages/Generations/Gen1";
 import Gen2 from "../src/pages/Generations/Gen2";
@@ -30,6 +30,10 @@ function App() {
     setActiveHeader(e.target.innerHTML.toLowerCase());
   }
 
+  useEffect(() => {
+    document.title = `${activePage} Pokemon`;
+  }, [activePage]);
+
   return (
     <Router>
       <div className="app">
@@ -40,14 +44,18 @@ function App() {
           updateActivePage={updateActivePage}
         />
         <Routes>
-          <Route exact path="/" element={<Gen1 />} />
-          <Route path="/Gen2" element={<Gen2 />} />
-          <Route path="/Gen3" element={<Gen3 />} />
-          <Route path="/Gen4" element={<Gen4 />} />
-          <Route path="/Gen5" element={<Gen5 />} />
-          <Route path="/Gen6" element={<Gen6 />} />
-          <Route path="/Gen7" element={<Gen7 />} />
-          <Route path="/Gen8" element={<Gen8 />} />
+          <Route
+            exact
+            path="/"
+            element={<Gen1 activeHeader={activeHeader} />}
+          />
+          <Route path="/Gen2" element={<Gen2 activeHeader={activeHeader} />} />
+          <Route path="/Gen3" element={<Gen3 activeHeader={activeHeader} />} />
+          <Route path="/Gen4" element={<Gen4 activeHeader={activeHeader} />} />
+          <Route path="/Gen5" element={<Gen5 activeHeader={activeHeader} />} />
+          <Route path="/Gen6" element={<Gen6 activeHeader={activeHeader} />} />
+          <Route path="/Gen7" element={<Gen7 activeHeader={activeHeader} />} />
+          <Route path="/Gen8" element={<Gen8 activeHeader={activeHeader} />} />
         </Routes>
       </div>
     </Router>
