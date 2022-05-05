@@ -1,5 +1,15 @@
-const Gen3 = () => {
-  return <div></div>;
+import React, { useState } from "react";
+import FavoriteSection from "../../components/FavoriteSection/FavoriteSection";
+import ListSection from "../../components/ListSection/ListSection";
+import "./Generations.scss";
+
+const Gen3 = ({ activeHeader }) => {
+  return (
+    <section className="generations">
+      <FavoriteSection gen={"Gen 3"} activeHeader={activeHeader} />
+      <ListSection gen={"Gen 3"} activeHeader={activeHeader} />
+    </section>
+  );
 };
 
 export default Gen3;
