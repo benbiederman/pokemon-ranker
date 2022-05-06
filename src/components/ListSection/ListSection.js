@@ -1,3 +1,4 @@
+import ListPokemon from "../ListPokemon/ListPokemon";
 import "./ListSection.scss";
 
 const ListSection = ({ activeHeader, gen }) => {
@@ -8,7 +9,42 @@ const ListSection = ({ activeHeader, gen }) => {
       }
     >
       <h2>{`${gen} Pokemon`}</h2>
-      <div className="list-data"></div>
+      <div className="list-data">
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+        <ListPokemon />
+      </div>
     </section>
   );
 };

@@ -1,0 +1,60 @@
+@import "../../style/mixins";
+@import "../../style/branding";
+
+@media screen and (min-width: 100px) {
+  .list-pokemon {
+    width: 45%;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px $darkGray;
+    @include flex(column, center, center);
+    padding: 1.25vh 1vw;
+    margin: 1.25vh auto;
+    cursor: pointer;
+    img {
+      min-width: 30%;
+      max-width: 50%;
+    }
+    h3 {
+      margin-top: 1.25vh;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .list-pokemon {
+    width: 30%;
+    margin: 1vh auto;
+    img {
+      min-width: 30%;
+      max-width: 50%;
+    }
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-pokemon {
+    margin: 0.625vh auto;
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list-pokemon {
+    width: 15%;
+    margin: 1vh auto;
+    img {
+      min-width: 30%;
+      max-width: 50%;
+    }
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
