@@ -20,6 +20,11 @@
       font-size: 1rem;
     }
   }
+
+  .favorited-pokemon {
+    background-color: $lightGold;
+    box-shadow: 0px 0px 8px $gold;
+  }
 }
 
 @media screen and (min-width: 300px) {

@@ -1,10 +1,25 @@
+import React, { useState } from "react";
 import "./ListPokemon.scss";
 
-const ListPokemon = () => {
+const ListPokemon = (props) => {
+  const [fav, setFav] = useState(props.favorite ? true : false);
+
+  function PokemonHandler() {
+    changeFav();
+    props.pokemonStatusCheck(fav, props.id, props.name, props.img);
+  }
+
+  function changeFav() {
+    setFav(!fav);
+  }
+
   return (
-    <div className="list-pokemon">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png" />
-      <h3>Fletchinder</h3>
+    <div
+      className={fav ? "list-pokemon favorited-pokemon" : "list-pokemon"}
+      onClick={PokemonHandler}
+    >
+      <img src={props.img} alt={props.name} />
+      <h3>{props.name}</h3>
     </div>
   );
 };
