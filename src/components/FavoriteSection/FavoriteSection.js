@@ -1,3 +1,4 @@
+import FavoritePokemon from "../FavoritePokemon/FavoritePokemon";
 import "./FavoriteSection.scss";
 
 const FavoriteSection = ({ activeHeader, gen }) => {

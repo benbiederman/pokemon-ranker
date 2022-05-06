@@ -24,6 +24,10 @@
     box-shadow: inset 0px 0px 5px #111;
   }
 
+  .favorite-data::-webkit-scrollbar {
+    display: none;
+  }
+
   .favorite-active {
     transform: translateX(0%);
   }
