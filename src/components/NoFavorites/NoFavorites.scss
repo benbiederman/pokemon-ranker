@@ -1,0 +1,35 @@
+@import "../../style/mixins";
+
+@media screen and (min-width: 100px) {
+  .no-fav {
+    min-height: 40vh;
+    width: 90%;
+    margin: 5vh auto 0;
+    text-align: center;
+    @include flex(column, center, center);
+    img {
+      width: 60%;
+      margin-bottom: 2.5vh;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .no-fav {
+    margin: 0 auto;
+    h3 {
+      font-size: 1.25rem;
+    }
+    img {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .no-fav {
+    img {
+      width: 20%;
+    }
+  }
+}
