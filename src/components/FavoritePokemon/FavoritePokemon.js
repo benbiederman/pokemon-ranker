@@ -1,10 +1,10 @@
 import "./FavoritePokemon.scss";
 
-const FavoritePokemon = () => {
+const FavoritePokemon = (props) => {
   return (
     <div className="favorite-pokemon">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png" />
-      <h3>Fletchinder</h3>
+      <img src={props.img} alt={props.name} />
+      <h3>{props.name}</h3>
     </div>
   );
 };
